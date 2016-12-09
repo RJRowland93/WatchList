@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
 var app = express();
-var port = process.env.PORT;
+var PORT = process.env.PORT;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + "/public"));
@@ -86,4 +86,4 @@ app.put("/update", function(req, res) {
   });
 });
 
-app.listen(port);
+app.listen(PORT);
